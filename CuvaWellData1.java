@@ -3,14 +3,6 @@
 import java.io.*;
 import java.util.Scanner;
 
-/*
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-*/
-
 import javafx.application.Application; 
 import javafx.scene.Group; 
 import javafx.scene.Scene; 
@@ -139,28 +131,6 @@ public class CuvaWellData1 extends Application {
 
 		}
 
-
-		
-/*
-		for(row = 1; row < 1700; row++){
-
-			jdate = Integer.parseInt(welldata[row][0]);
-			depth = -1 * (Integer.parseInt(welldata[row][2]));
-			if (depth > -9999){
-				x2 = jdate + offsetX;
-				y2 = depth + offsetY + 250;
-				System.out.println(x1 + " " + y1 + " " + x2 + " " + y2);
-				line = new Line(x1, y1, x2, y2);
-				line.setStrokeWidth(2.0); 
-				line.setStroke(Color.RED);
-				group.getChildren().add(line);  
-			}
-			x1 = x2;
-			y1 = y2;
-		}
-			
-*/
- 
 		//Creating a scene object 
 		Scene scene = new Scene(group, 1850 + offsetX, 600, Color.BLACK);  
       
