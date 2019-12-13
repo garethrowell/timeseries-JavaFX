@@ -1,9 +1,9 @@
 
 /*
-This was the first compiled version of the Cuyahoga Valley (CUVA) 
+Cuyahoga Valley (CUVA) 
 Ecotone well depth data visualization. 
 Drags pen between data gaps.
-Author: G. Rowell 12/13/2019
+
 */
 
 
