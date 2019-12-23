@@ -1,8 +1,4 @@
-
 /*
-
-Implement shape path
-
 */
 
 
@@ -20,7 +16,7 @@ import javafx.stage.Stage;
 
 
 
-public class CuvaWellData extends Application {
+public class SimpleLineGroup extends Application {
 	
     @Override
     public void start(Stage stage) throws Exception {
