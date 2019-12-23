@@ -1,10 +1,6 @@
 
 /*
-Cuyahoga Valley (CUVA) 
-Ecotone well depth data visualization. 
-Drags pen between data gaps.
 
-*/
 
 
 
@@ -143,6 +139,7 @@ public class CuvaWellData extends Application {
 	stage.show(); 
 
 }
+	
     
    public static void main(String[] args){
        launch(args);
