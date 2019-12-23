@@ -1,6 +1,8 @@
+*
 
-/*
+Drags pen between data gaps.
 
+*/
 
 
 
@@ -17,7 +19,7 @@ import javafx.stage.Stage;
 
 
 
-public class CuvaWellData extends Application {
+public class CuvaWellDataPen extends Application {
 	
     @Override
     public void start(Stage stage) throws Exception {
@@ -139,7 +141,6 @@ public class CuvaWellData extends Application {
 	stage.show(); 
 
 }
-	
     
    public static void main(String[] args){
        launch(args);
