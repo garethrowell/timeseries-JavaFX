@@ -2,7 +2,7 @@
 
 Project: 
 
-Visualizing Wetland Well Depth Data
+Visualizing Wetland Data
 Cuyahoga Valley National Park
 
 Where did the data come from?
@@ -12,6 +12,19 @@ Cuyahoga Valley National Park
 https://www.nps.gov/im/htln/parks.htm
 
 https://www.nps.gov/cuva/learn/nature/wetlands.htm
+
+What was measured?
+Water level depth using Ecotone Water Level Data Logger
+Eight well sites from November 2010 to 
+
+How were the data processed, cleaned and modified for the visualization?
+  Metadata and spreadsheets from individual well loggers
+  Resolve single and multiple observations per day
+  Double cast to integers for graphics
+  Combine all eight wells into one table
+
+
+
 
 
 Developing a data visualization
