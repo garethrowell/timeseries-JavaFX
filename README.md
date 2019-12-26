@@ -14,14 +14,14 @@ https://www.nps.gov/im/htln/parks.htm
 https://www.nps.gov/cuva/learn/nature/wetlands.htm
 
 What was measured?
-Water level depth using Ecotone Water Level Data Logger
-Eight well sites from November 2010 to 
+  Water level depth using Ecotone Water Level Data Logger;
+  Eight well sites from November 2010 to June 2018;
 
-How were the data processed, cleaned and modified for the visualization?
-  Metadata and spreadsheets from individual well loggers
-  Resolve single and multiple observations per day
-  Double cast to integers for graphics
-  Combine all eight wells into one table
+How were the data processed, cleaned, and modified for the visualization?
+  Metadata and spreadsheets from individual well loggers;
+  Resolve single and multiple observations per day;
+  Double cast to integers for graphics;
+  Combine all eight wells into one table;
 
 
 
@@ -33,6 +33,7 @@ https://github.com/
 
 
 ---------------------------------------
+Notes
 
 The Path class represents a simple shape and provides facilities required for basic construction and management of a geometric path. 
 
