@@ -1,19 +1,13 @@
 # timeseries_visualization
 
-Project: 
+---------------------------------------
 
-Visualizing Wetland Data
+# Location
 Cuyahoga Valley National Park
-
-Where did the data come from?
-
-Cuyahoga Valley National Park
-
 https://www.nps.gov/im/htln/parks.htm
-
 https://www.nps.gov/cuva/learn/nature/wetlands.htm
 
-What was measured?
+# Data source
   Water level depth using Ecotone Water Level Data Logger;
   Eight well sites from November 2010 to June 2018;
 
@@ -29,7 +23,6 @@ How were the data processed, cleaned, and modified for the visualization?
 ---------------------------------------
 Notes
 ---------------------------------------
-Notes
 
 Implement shape.path to manage uninterrupted series;
 Create reusable classes for file reading and XYaxes;
