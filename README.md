@@ -1,39 +1,35 @@
 # timeseries_visualization
-
-Project: 
-
-Visualizing Wetland Data
+---------------------------------------
+# Location
 Cuyahoga Valley National Park
-
-Where did the data come from?
-
-Cuyahoga Valley National Park
-
 https://www.nps.gov/im/htln/parks.htm
-
 https://www.nps.gov/cuva/learn/nature/wetlands.htm
 
-What was measured?
+# Data source
   Water level depth using Ecotone Water Level Data Logger;
   Eight well sites from November 2010 to June 2018;
 
-How were the data processed, cleaned, and modified for the visualization?
-  Metadata and spreadsheets from individual well loggers;
-  Resolve single and multiple observations per day;
-  Double cast to integers for graphics;
-  Combine all eight wells into one table;
+# Data processing issues
+  Actual data is double; convert to integers for graphics;
+  Missing data;
+  Single vs. multiple observations per day;
+  Each spreadsheet is one well site for one year;
+  Combine all eight wells into one table: 2010 - 2018;
+  Use Julian dates where 1/1/2010 is day 1;
 
 
-
-
-
-Developing a data visualization
-
-https://github.com/
 
 
 ---------------------------------------
 Notes
+---------------------------------------
+
+Implement shape.path to manage uninterrupted series;
+Create reusable classes for file reading and XYaxes;
+Create package structure;
+
+Create resusable classes for (1) loading data into array and (2) displaying the X and Y axis.
+
 
 The Path class represents a simple shape and provides facilities required for basic construction and management of a geometric path. 
 
