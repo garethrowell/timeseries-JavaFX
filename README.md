@@ -26,14 +26,16 @@ How were the data processed, cleaned, and modified for the visualization?
 
 
 
-
-Developing a data visualization
-
-https://github.com/
-
-
 ---------------------------------------
 Notes
+
+Create resusable classes for (1) loading data into array and (2) displaying the X and Y axis.
+
+Create a project -> jar.
+
+Move to an IDE to facilitate creating JavaFX GUI.
+
+Control data representation using Shape.path
 
 The Path class represents a simple shape and provides facilities required for basic construction and management of a geometric path. 
 
