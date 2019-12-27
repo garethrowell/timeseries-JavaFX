@@ -1,21 +1,21 @@
-# timeseries_visualization
-
 ---------------------------------------
-
 # Location
 Cuyahoga Valley National Park
 https://www.nps.gov/im/htln/parks.htm
 https://www.nps.gov/cuva/learn/nature/wetlands.htm
 
 # Data source
+# timeseries_visualization
   Water level depth using Ecotone Water Level Data Logger;
   Eight well sites from November 2010 to June 2018;
 
-How were the data processed, cleaned, and modified for the visualization?
-  Metadata and spreadsheets from individual well loggers;
-  Resolve single and multiple observations per day;
-  Double cast to integers for graphics;
-  Combine all eight wells into one table;
+# Data processing issues
+  Actual data is double; convert to integers for graphics;
+  Missing data;
+  Single vs. multiple observations per day;
+  Each spreadsheet is one well site for one year;
+  Combine all eight wells into one table: 2010 - 2018;
+  Use Julian dates where 1/1/2010 is day 1;
 
 
 
