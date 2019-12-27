@@ -7,7 +7,6 @@ https://www.nps.gov/im/htln/parks.htm
 https://www.nps.gov/cuva/learn/nature/wetlands.htm
 
 # Data source
-# timeseries_visualization
   Water level depth using Ecotone Water Level Data Logger;
   Eight well sites from November 2010 to June 2018;
 
