@@ -1,5 +1,8 @@
 
 /*
+Create reusable classes
+
+*/
 
 
 
@@ -14,7 +17,6 @@ import javafx.scene.Scene;
 import javafx.scene.shape.Line;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage; 
-
 
 
 public class CuvaWellData extends Application {
