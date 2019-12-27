@@ -129,6 +129,7 @@ public class CuvaWellData extends Application {
 		}
 
 	}
+	    
 
 	Scene scene = new Scene(group, 1850 + offsetX, 600, Color.BLACK);  
       
