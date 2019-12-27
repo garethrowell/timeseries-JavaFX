@@ -26,7 +26,6 @@ How were the data processed, cleaned, and modified for the visualization?
 
 
 
-
 Developing a data visualization
 
 https://github.com/
