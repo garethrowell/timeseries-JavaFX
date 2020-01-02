@@ -24,6 +24,10 @@ https://www.nps.gov/cuva/learn/nature/wetlands.htm
 Notes
 ---------------------------------------
 
+Email Sonia about well locations.
+
+Move .java files to src.
+
 Implement shape.path to manage uninterrupted series;
 Create reusable classes for file reading and XYaxes;
 Create package structure;
