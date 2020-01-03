@@ -1,4 +1,4 @@
-# timeseries_visualization
+# timeseries-visualization
 ---------------------------------------
 # Location
   Cuyahoga Valley National Park
