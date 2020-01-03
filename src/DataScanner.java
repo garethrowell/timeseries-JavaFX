@@ -25,7 +25,7 @@ public class DataScanner {
 		}
     }
     
-	public String[][] load(int maxrow, int maxcol){
+	public String load(int maxrow, int maxcol){
 		// ex. maxrow = 2635; maxcol = 9;
 		System.out.println("Inside load");
 		String mydata[][] = new String[maxrow][maxcol];
@@ -34,11 +34,10 @@ public class DataScanner {
 			String parts[] = line.split(",");
 			for(col = 0; col < maxcol; col++){
 				mydata[row][col] = parts[col];
-				//System.out.println(mydata[row][col] + " ");
 			}
 		}
 		System.out.println("Returning array");		
-		return(mydata);
+		return mydata[maxrow][maxcol];
 	}
 }
 	

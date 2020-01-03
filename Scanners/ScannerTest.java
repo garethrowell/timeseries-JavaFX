@@ -9,14 +9,26 @@ public class ScannerTest {
 	   
 	   int maxrow = 2635;
 	   int maxcol = 9;
-	   String welldata[][] = new String[maxrow][maxcol];
+	   //String welldata[][] = new String[maxrow][maxcol];
+	   String[][] welldata = new String[maxrow][maxcol];
 	   
 	   String infile = new String();
-	   infile = "C:\\Users\\Growell\\src\\JavaFX\\data\\CUVA_corr_depths_int.csv";
-
+	   infile = "C:\\Users\\Growell\\src\\CUVA_corr_depths_int.csv";
+    try{
 	   DataScanner datascanner = new DataScanner(infile);
        welldata = datascanner.load(maxrow, maxcol);
-	  
-	 
+	   //System.out.println(welldata);	  
+
+		System.out.println("ScannerTest");
+
+		for(int row = 2633; row < 2635; row++){
+			for(int col = 0; col < maxcol; col++){
+				System.out.println(welldata[row][col] + " ");
+			}
+		}	   
+	}	  
+	catch (FileNotFoundException ex){
+			System.out.println(ex);
+    } 
    }
 }
