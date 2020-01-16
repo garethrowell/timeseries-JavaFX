@@ -32,6 +32,8 @@ public class MyVis extends Application {
       
 		stage.setTitle("Cuva Well Data");
       
+	  
+	  
 		//Adding scene to the stage 
 		stage.setScene(scene);
       
@@ -40,7 +42,7 @@ public class MyVis extends Application {
 
 	}
 	
-     
+    
 	public static void main(String[] args){
        launch(args);
 	}
