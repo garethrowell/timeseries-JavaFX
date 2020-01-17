@@ -1,6 +1,7 @@
 
 XYAxes features
 
+XYAxesTitle
 
 XLine
 XLineStoke
