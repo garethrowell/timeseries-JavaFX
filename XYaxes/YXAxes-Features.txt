@@ -1,0 +1,34 @@
+
+Features of a Coordinate System
+
+
+1. X Axis
+1.1. X Axis Line 
+1.1.1. X line dimensions: The dimensions of the line representing the X Axis
+1.1.2. X line width: The stroke thickness of the line
+1.2. X Axis Major Hash
+1.2.1. Line dimensions: The locations of Major hash lines
+1.2.2. Line width: The stroke thickness of Major hash lines
+1.2.3. Labels text for Major Hashes
+1.2.4. Labels locations for Major Hashes
+1.2. X Axis Minor Hash
+1.2.1. Line dimensions: The locations of Minor hash lines
+1.2.2. Line width: The stroke thickness of Minor hash lines
+1.2.3. Labels text for Minor Hashes
+1.2.4. Labels locations for Minor Hashes
+
+
+2. Y Axis
+2.1. Y Axis Line 
+2.1.1. Y line dimensions: The dimensions of the line representing the Y Axis
+2.1.2. Y line width: The stroke thickness of the line
+2.2. Y Axis Major Hash
+2.2.1. Line dimensions: The locations of Major hash lines
+2.2.2. Line width: The stroke thickness of Major hash lines
+2.2.3. Labels text for Major Hashes
+2.2.4. Labels locations for Major Hashes
+2.2. Y Axis Minor Hash
+2.2.1. Line dimensions: The locations of Minor hash lines
+2.2.2. Line width: The stroke thickness of Minor hash lines
+2.2.3. Labels text for Minor Hashes
+2.2.4. Labels locations for Minor Hashes
