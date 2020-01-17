@@ -1,0 +1,18 @@
+
+XYAxes features
+
+
+XLine
+XLineStoke
+XMajHashLine
+XMajHashLineStroke
+XMajHashLineLabel
+
+YLine
+YLineStoke
+YMajHashLine
+YMajHashLineStroke
+YMajHashLineLabel
+
+XOffset
+YOffset
