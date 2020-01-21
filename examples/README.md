@@ -1,6 +1,6 @@
 
 
 
-This directory contains working examples of JavaFX scripts
+This directory contains working examples
 
 
