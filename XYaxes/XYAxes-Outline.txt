@@ -1,0 +1,41 @@
+
+Features of a Coordinate System
+
+
+1. X Axis
+1.1. X Axis Line 
+1.1.1. X line dimensions: The dimensions of the line representing the X Axis
+1.1.2. X line width: The stroke thickness of the line
+1.2. X Axis Major Hashes
+1.2.1.i...  Line dimensions: The locations of Major hash lines
+1.2.2.i...  Line widths: The stroke thickness of Major hash lines
+1.2.3.i...  Labels text for Major Hashes
+1.2.4.i...  Labels locations for Major Hashes
+1.3. X Axis Minor Hashes
+1.3.1.i...  Line dimensions: The locations of Minor hash lines
+1.3.2.i... Line width: The stroke thickness of Minor hash lines
+1.3.3.i... Labels text for Minor Hashes
+1.3.4.i... Labels locations for Minor Hashes
+
+
+2. Y Axis
+2.1. Y Axis Line 
+2.1.1. Y line dimensions: The dimensions of the line representing the Y Axis
+2.1.2. Y line width: The stroke thickness of the line
+2.2. Y Axis Major Hashes
+2.2.1.i... Line dimensions: The locations of Major hash lines
+2.2.2.i... Line width: The stroke thickness of Major hash lines
+2.2.3.i... Labels text for Major Hashes
+2.2.4. Labels locations for Major Hashes
+2.3. Y Axis Minor Hashes
+2.3.1.i... Line dimensions: The locations of Minor hash lines
+2.3.2.i... Line width: The stroke thickness of Minor hash lines
+2.3.3.i... Labels text for Minor Hashes
+2.3.4.i... Labels locations for Minor Hashes
+
+
+3. Offsets - this controls where to display the XY Axes on the JavaFX display coordinate system
+3.1. X offset - number of pixels from left edge of display
+3.2. Y offset - number of pixels from the top of the display
+
+
