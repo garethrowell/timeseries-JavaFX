@@ -14,7 +14,7 @@ public class DataScanner {
 
 
 	DataScanner(String sourcefile)throws FileNotFoundException {
-	    //ex. infile = "C:\\Users\\Growell\\src\\JavaFX\\CUVA_corr_depths_int.csv";
+		
 		infile = sourcefile;
 		try{
 			scanner = new Scanner(new BufferedReader(new FileReader(infile)));
@@ -25,19 +25,21 @@ public class DataScanner {
 		}
     }
     
-	public String load(int maxrow, int maxcol){
-		// ex. maxrow = 2635; maxcol = 9;
-		System.out.println("Inside load");
+	public String[][] load(int maxrow, int maxcol){
+		
 		String mydata[][] = new String[maxrow][maxcol];
+		
 		for(row = 0; row < maxrow; row++){
+			
 			String line = scanner.nextLine();
 			String parts[] = line.split(",");
+			
 			for(col = 0; col < maxcol; col++){
 				mydata[row][col] = parts[col];
 			}
 		}
-		System.out.println("Returning array");		
-		return mydata[maxrow][maxcol];
+		
+		return(mydata);
 	}
 }
 	
