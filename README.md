@@ -30,11 +30,11 @@ https://www.nps.gov/cuva/learn/nature/wetlands.htm
   
 # SimpleLineGroup.java 
   This was my first attempt to load data and display it on an XY plot. Data were managed as individual lines
-  and loaded individually into a Group object.
+  and loaded into a single Group object.
   
 # SingleWellPaths.java
-  This was the second attempt to display data. The Path object is used to manage each uninteruppted 
-  set of logger data. Four paths from one well are hard-coded into the program.
+  This was my second attempt to display data. The Path object was used to manage uninterrupted 
+  sets of logger data. Four paths from one well are hard-coded into the program.
   
   
   
