@@ -19,11 +19,25 @@ https://www.nps.gov/cuva/learn/nature/wetlands.htm
   Combine all eight wells into one table: 2010 - 2018;
   Use Julian dates where 1/1/2010 is day 1;
 
-# Notes on working examples
+# Working examples:
 
-SimpleLineGroup
-
-
+# DataScanner.java 
+  Data Scanner is a wrapper for java.util.Scanner. It takes a file name as an argument 
+  and loads its contents into a 2 dimensional array.
+  
+# ScannerTest.java
+  ScannerTest shows how to use the Data Scanner
+  
+# SimpleLineGroup.java 
+  This was my first attempt to load data and display it on an XY plot. Data were managed as individual lines
+  and loaded individually into a Group object.
+  
+# SingleWellPaths.java
+  This was the second attempt to display data. The Path object is used to manage each uninteruppted 
+  set of logger data. Four paths from one well are hard-coded into the program.
+  
+  
+  
 ---------------------------------------
 Notes
 ---------------------------------------
