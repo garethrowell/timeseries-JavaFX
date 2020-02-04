@@ -104,6 +104,8 @@ public class AllWellsPaths extends Application {
 		
 		int maxrow = 2636;
 		int maxcol = 9;
+		int row = 1;
+		int col = 1;
 		
 		//String welldata[][] = new String[maxrow][maxcol];
 		String[][] welldata = new String[maxrow][maxcol];
@@ -115,7 +117,7 @@ public class AllWellsPaths extends Application {
 			DataScanner datascanner = new DataScanner(infile);
 			welldata = datascanner.load(maxrow, maxcol);  
 
-			for(int row = 0; row < maxrow; row++){
+			for(row = 0; row < maxrow; row++){
 				System.out.println(row + " " + welldata[row][0] + " " + welldata[row][1] +
 				    " " +  welldata[row][2] + " " +  welldata[row][3] + 	
 					" " +  welldata[row][4] + " " +  welldata[row][5] + 
@@ -137,7 +139,6 @@ public class AllWellsPaths extends Application {
 		path.setStroke(Color.RED);
 		path.setStrokeWidth(2);
 
-		int row, col;
         Integer jdate = null;
 		Integer flag = null;
         Integer depth = null;	
@@ -147,72 +148,69 @@ public class AllWellsPaths extends Application {
 		
 		
 		row = 1;
-		col = 8; //Well
+		col = 1; //Well
 		
-		//System.out.println("Where: top " + row + " " + maxrow);
+		System.out.println("Where: top " + row + " " + col);
 		
-		 // start new path
-		jdate = (Integer.parseInt(welldata[row][0]))/2;
-		depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
-		flag = (Integer.parseInt(welldata[row][col]));
-		moveTo = new MoveTo(jdate, depth);	
-		path.getElements().add(moveTo); 
-		
-		
-		row = 2;
-		
-		jdate = (Integer.parseInt(welldata[row][0]))/2;
-		depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
-		flag = (Integer.parseInt(welldata[row][col]));	
-		
-		
-		//System.out.println("Where: just before path " + row + " " + maxrow);
-		
-		while( row < maxrow){
-			
-			//start new path
+		while( col < 8 ){
+			System.out.println("Where: Inside col while " + row + " " + col);
+			 // start new path
 			
 			jdate = (Integer.parseInt(welldata[row][0]))/2;
 			depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
-			flag = (Integer.parseInt(welldata[row][col]));
-			moveTo = new MoveTo(jdate, depth);	
-			path.getElements().add(moveTo); 
-		
-		
-			row++;
-		
-			jdate = (Integer.parseInt(welldata[row][0]))/2;
-			depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
-			flag = (Integer.parseInt(welldata[row][col]));		
-			while((flag != -9999) && (row < maxrow)){
+			flag = (Integer.parseInt(welldata[row][col]));	
 			
-				//System.out.println("Where: inside path - top " + row + " " + maxrow);
-				//System.out.println("flag is " + flag);
-				lineTo = new LineTo(jdate, depth);
-                //System.out.println("depth is " + depth);				
-				path.getElements().add(lineTo); 
+			
+			System.out.println("Where: Just before path while " + row + " " + col);
+			
+			while( row < maxrow){
+				
+				//start new path
+				System.out.println("Where: Inside row while - 1 " + row + " " + col);
+				jdate = (Integer.parseInt(welldata[row][0]))/2;
+				depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
+				flag = (Integer.parseInt(welldata[row][col]));
+				moveTo = new MoveTo(jdate, depth);	
+				path.getElements().add(moveTo); 
+				System.out.println("Where: Inside row while - 2 " + row + " " + col);
+			
 				row++;
 			
 				jdate = (Integer.parseInt(welldata[row][0]))/2;
 				depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
-				flag = (Integer.parseInt(welldata[row][col]));
-				//System.out.println("Where: inside path - botton " + row + " " + maxrow);
-				//System.out.println("flag is " + flag);
-			}
-			//System.out.println("Where: after path " + row + " " + maxrow);
-		
-		
-			while((flag == -9999)&& (row < maxrow)){ // and test for row < maxrow
+				flag = (Integer.parseInt(welldata[row][col]));		
+				while((flag != -9999) && (row < maxrow)){
+				
+					System.out.println("Where: Inside path while - 3 " + row + " " + col);
+					//System.out.println("Where: Inside path while - 3  " + jdate+ " " + depth);
+					lineTo = new LineTo(jdate, depth);				
+					path.getElements().add(lineTo); 
+					row++;
+				
+					jdate = (Integer.parseInt(welldata[row][0]))/2;
+					depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
+					flag = (Integer.parseInt(welldata[row][col]));
+					//System.out.println("Where: Inside path while - 4 " + row + " " + col);
+				}
+				
 			
-				flag = (Integer.parseInt(welldata[row][col]));
-				row++;
+			
+				while((flag == -9999)&& (row < maxrow)){ // and test for row < maxrow
+					System.out.println("Where: Inside -9999 while - 5 " + row + " " + col);
+					flag = (Integer.parseInt(welldata[row][col]));
+					row++;
+				
+				}
+				System.out.println("Where: Bottom of row while - 6 " + row + " " + col);
 			
 			}
-        
+			System.out.println("Where: Bottom of col while - 7 " + row + " " + col);
+			col++;
+			row = 1;
 		}
 		
 		// well label
-		
+		col = 1;
 		text = new Text();
 		text.setText(welldata[0][col]);
 		text.setX(1460);
@@ -242,3 +240,4 @@ public class AllWellsPaths extends Application {
        launch(args);
 	}
 }
+
