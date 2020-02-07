@@ -6,12 +6,9 @@
 
 
 
-import java.io.*;
-import java.util.Scanner;
 
 import javafx.application.Application; 
 import javafx.scene.Group; 
-import javafx.scene.Scene; 
 import javafx.scene.shape.Line;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage; 
@@ -22,22 +19,27 @@ import javafx.scene.text.FontWeight;
 
 import javafx.scene.shape.LineTo; 
 import javafx.scene.shape.MoveTo; 
-import javafx.scene.shape.Path;
 
 
 
-public class XYAxes extends Application {
+
+public class XYAxes{
 	
-    @Override
-    public void start(Stage stage) throws Exception {
+	Group group = null;
+	 
+	XYAxes(){	
+
+		System.out.println("Trying XYAxes");
 		
+    }	
 	
+	public void addFeatures(Group group, int offsetX, int offsetY){
 		//------------------------------------------------------------------------------
 		// display the coordinate system
 
-		int offsetX = 50;
-		int offsetY = 25;
-   
+		//int offsetX = 50;
+		//int offsetY = 25;
+
 		//Creating Y axis
 		Line yAxis = new Line(offsetX, offsetY, offsetX, offsetY + 500);
 		yAxis.setStrokeWidth(3.0); 
@@ -46,8 +48,7 @@ public class XYAxes extends Application {
 		Line xAxis = new Line(offsetX, offsetY + 250, offsetX + 1825, offsetY + 250);
 		xAxis.setStrokeWidth(3.0); 
 		xAxis.setStroke(Color.WHITE);
-	  
-		Group group = new Group(); 
+
 		group.getChildren().add(xAxis);
 		group.getChildren().add(yAxis);
 	  
@@ -91,6 +92,7 @@ public class XYAxes extends Application {
 				group.getChildren().add(text);
 			}
 			
+			
 		}
 	  
 		//make five minor hash marks on X axis (at 365, 730, 1095, 1460, 1825)
@@ -101,24 +103,7 @@ public class XYAxes extends Application {
 			line.setStroke(Color.WHITE);
 			group.getChildren().add(line);  
 		}
-	 
-	 
-
-		
-		Scene scene = new Scene(group, 1850 + offsetX, 600, Color.BLACK);  
-      
-		stage.setTitle("Cuva Well Data: " + welldata[0][col]);
-      
-		//Adding scene to the stage 
-		stage.setScene(scene);
-      
-		//Displaying the contents of the stage 
-		stage.show(); 
-
-	}
 	
-    
-	public static void main(String[] args){
-       launch(args);
 	}
 }
+	

@@ -25,7 +25,7 @@ public class DataScanner {
 		}
     }
     
-	public String[][] load(int maxrow, int maxcol){
+	public String[][] load(int maxrow, int maxcol, boolean echo){
 		
 		String mydata[][] = new String[maxrow][maxcol];
 		
@@ -37,6 +37,14 @@ public class DataScanner {
 			for(col = 0; col < maxcol; col++){
 				mydata[row][col] = parts[col];
 			}
+			
+			for(row = 0; row < maxrow; row++){
+			System.out.println(row + " " + mydata[row][0] + " " + mydata[row][1] +
+				" " +  mydata[row][2] + " " +  mydata[row][3] + 	
+				" " +  mydata[row][4] + " " +  mydata[row][5] + 
+				" " +  mydata[row][6] + " " +  mydata[row][7] +
+				" " +  mydata[row][8] + " " +  mydata[row][9]);
+			}	
 		}
 		
 		return(mydata);
