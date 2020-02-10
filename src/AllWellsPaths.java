@@ -45,13 +45,12 @@ public class AllWellsPaths extends Application {
 		int maxcol = 10;
 		int row = 1;
 		int col = 1;
-		boolean echo = true;
+		boolean echo = false;
 		
-		//String welldata[][] = new String[maxrow][maxcol];
 		String[][] welldata = new String[maxrow][maxcol];
 	   
 		String infile = new String();
-		infile = "C:\\Users\\Growell\\src\\\\ts\\CUVA_well_depth_averages.csv";
+		infile = "C:\\Users\\Growell\\Documents\\src\\ts\\CUVA_well_depth_averages.csv";
 	   
 		try{
 			DataScanner datascanner = new DataScanner(infile);
@@ -66,7 +65,9 @@ public class AllWellsPaths extends Application {
 		// here we are using the Path object to show continuous runs
 		// plot col 0 (time) against col 8 (site: Fitzwater)
 		
+		Text text = null;
 		
+		/*
 		Path path = new Path();
 		Path avepath = new Path();
 		path.setStroke(Color.RED);
@@ -204,9 +205,10 @@ public class AllWellsPaths extends Application {
 			System.out.println("Where: Bottom of row while - " + row + " " + col);
 			
 		}
-		//
+		*/
 		
 		// well label
+		
 		col = 1;
 		text = new Text();
 		text.setText("Individual wells");
@@ -228,8 +230,8 @@ public class AllWellsPaths extends Application {
 		avetext.setFill(Color.BLUE);
 		group.getChildren().add(avetext);
 		
-		group.getChildren().add(path);
-		group.getChildren().add(avepath);
+		//group.getChildren().add(path);
+		//group.getChildren().add(avepath);
 		
 		Scene scene = new Scene(group, 1850 + offsetX, 600, Color.BLACK);  
       
