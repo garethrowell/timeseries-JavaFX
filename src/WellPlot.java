@@ -1,9 +1,9 @@
-
-
-
+import java.io.*;
+import java.util.Scanner;
 
 import javafx.application.Application; 
 import javafx.scene.Group; 
+import javafx.scene.Scene; 
 import javafx.scene.shape.Line;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage; 
@@ -14,85 +14,106 @@ import javafx.scene.text.FontWeight;
 
 import javafx.scene.shape.LineTo; 
 import javafx.scene.shape.MoveTo; 
+import javafx.scene.shape.Path;
 
 
 
-
-public class XYAxes{
+public class WellPlot{
 	
-	 
-	XYAxes(){	
 
-		System.out.println("Trying XYAxes");
-		
+	int col, offsetX, offsetY, maxrow, maxcol;
+	String[][] welldata = null;
+
+	 
+	WellPlot(int wellno, int wellmaxrow, int wellmaxcol, String[][] inputdata){	
+		col = wellno;
+		maxrow = wellmaxrow;
+		maxcol = wellmaxcol;
+		welldata =  new String[maxrow][maxcol];
+		welldata = inputdata;
+		maxrow = maxrow - 1;
+		//System.out.println("Inside WellPlot contructor");		
     }	
 	
-	public void addFeatures(Group group, int offsetX, int offsetY){
-
-        // specify lines and text for X and Y axes
+	public void addPaths(Group group, int offsetX, int offsetY){ 
+		//System.out.println("Inside addPaths method");	
 		
-		Line yAxis = new Line(offsetX, offsetY, offsetX, offsetY + 500);
-		yAxis.setStrokeWidth(3.0); 
-		yAxis.setStroke(Color.WHITE);
-	  
-		Line xAxis = new Line(offsetX, offsetY + 250, offsetX + 1825, offsetY + 250);
-		xAxis.setStrokeWidth(3.0); 
-		xAxis.setStroke(Color.WHITE);
+		int row = 1;
+		Path path = new Path();	
+        Integer jdate = null;
+		Integer flag = null;
+        Integer depth = null;	
+		LineTo lineTo = null;
+		MoveTo moveTo = null;
+			
+		
+		 // start new path
+		//System.out.println("Start new path");
+		//System.out.println("welldata[row][0] is " + welldata[row][0]);
+		
+		jdate = (Integer.parseInt(welldata[row][0] + offsetX))/2;
+		//System.out.println("jdate: " + jdate );
+		
+		depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
+		flag = (Integer.parseInt(welldata[row][col]));	
+		
+		//System.out.println("jdate, depth, flag: " + jdate + depth + flag);
+		
+		
+		//System.out.println("Before row while of addPaths method");
+		
+		while( row < maxrow ){
 
-		group.getChildren().add(xAxis);
-		group.getChildren().add(yAxis);
-	  
-		//make five hash marks on y axis (at -200, -100, 0, 100, 200)
-		int yhashno = 5;  
-		Line line = null;
-		Text text = null;
-		for(int i = 0; i < yhashno; ++i){
-			line = new Line(offsetX, (offsetY + 450 - (i*100)), offsetX + 20, (offsetY + 450 - (i*100)));
-			line.setStrokeWidth(2.0);
-			line.setStroke(Color.WHITE);
-			group.getChildren().add(line);    
+			if(flag != -9999){
+				
+				//System.out.println("Inside if flag of addPaths method");
+				jdate = (Integer.parseInt(welldata[row][0] + offsetX))/2;
+				depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
+				flag = (Integer.parseInt(welldata[row][col]));
+				moveTo = new MoveTo(jdate, depth);
+				path.getElements().add(moveTo);
+				group.getChildren().add(path);
+				row++;
 			
-			text = new Text();
-			if(i != 2){
-				text.setText(String.valueOf(offsetY - 225 + (i*100)));
-				text.setX(offsetX + 30);
-				text.setY(offsetY + 455 - (i*100));
-				text.setStrokeWidth(1);
-				text.setStroke(Color.WHITE);
-				group.getChildren().add(text);
+				jdate = (Integer.parseInt(welldata[row][0] + offsetX))/2;
+				depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
+				flag = (Integer.parseInt(welldata[row][col]));		
+				while((flag != -9999) && (row < maxrow)){
+			        //System.out.println("Inside path while... row, jdate, depth: " + row + " " + 
+						//jdate + " " + depth);
+					lineTo = new LineTo(jdate, depth);				
+					path.getElements().add(lineTo); 
+					group.getChildren().add(path);
+				
+					row++;
+			
+					jdate = (Integer.parseInt(welldata[row][0] + offsetX))/2;
+					depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
+					flag = (Integer.parseInt(welldata[row][col]));
+					System.out.println("Bottom of path while");
+
+				}
+				System.out.println("End of path");
+					
+
+				System.out.println("Very end of path");				
+			}
+		
+
+			while((flag == -9999)&& (row < maxrow)){ // and test for row < maxrow
+
+				flag = (Integer.parseInt(welldata[row][col]));	
+				row++;
+				System.out.println("Bottom of flag while");
+				
 			}
 			
 		}
-	  
-		//make ten major hash marks on X axis (at 365, 730, 1095, 1460, 1825)
-		int xhashno = 6; 
-		for(int i = 0; i < xhashno; ++i){
-			line = new Line(offsetX + (365*i), offsetY + 250, offsetX + (i*365), offsetY + 230);
-			line.setStrokeWidth(2.0); 
-			line.setStroke(Color.WHITE);
-			group.getChildren().add(line);  
-			
-			if(i > 0){
-				text = new Text();
-				text.setText(String.valueOf(2010 + 2*i));
-				text.setX(offsetX + (365*i - 12));
-				text.setY(offsetY + 220);
-				text.setStrokeWidth(1);
-				text.setStroke(Color.WHITE);
-				group.getChildren().add(text);
-			}
-			
-			
-		}
-	  
-		//make five minor hash marks on X axis (at 365, 730, 1095, 1460, 1825)
-		yhashno = 6; 
-		for(int i = 0; i < yhashno; ++i){
-			line = new Line(offsetX + ((365*i) - 182), offsetY + 250, offsetX + (i*365)-182, offsetY + 240);
-			line.setStrokeWidth(1.0); 
-			line.setStroke(Color.WHITE);
-			group.getChildren().add(line);  
-		}
-	
+		path.setStroke(Color.RED);
+		path.setStrokeWidth(1);	
+		System.out.println("Bottom of addPaths method");
+				
 	}
 }
+
+

@@ -63,77 +63,14 @@ public class AllWellsPaths extends Application {
 		//------------------------------------------------------------------------------
 		// do something with the data	
 
-		maxrow = maxrow - 1;
-		
-		Path path = new Path();
-		Path avepath = new Path();
-		path.setStroke(Color.RED);
-		path.setStrokeWidth(1);
-		avepath.setStroke(Color.BLUE);
-		avepath.setStrokeWidth(1);	
-		
-		
 
-        Integer jdate = null;
-		Integer flag = null;
-        Integer depth = null;	
-		LineTo lineTo = null;
-		MoveTo moveTo = null;
-			
-		row = 1;
-
-		col = 9; //Well
+		col = 1;
 		
-		 // start new path
-		
-		jdate = (Integer.parseInt(welldata[row][0]))/2;
-		depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
-		flag = (Integer.parseInt(welldata[row][col]));	
-		
-	
-		
-		while( row < maxrow ){
-
-			if(flag != -9999){
-				
-				jdate = (Integer.parseInt(welldata[row][0]))/2;
-				depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
-				flag = (Integer.parseInt(welldata[row][col]));
-				moveTo = new MoveTo(jdate, depth);
-				path.getElements().add(moveTo);
-
-				row++;
-			
-				jdate = (Integer.parseInt(welldata[row][0]))/2;
-				depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
-				flag = (Integer.parseInt(welldata[row][col]));		
-				while((flag != -9999) && (row < maxrow)){
-			
-					lineTo = new LineTo(jdate, depth);				
-					path.getElements().add(lineTo); 
-				
-					row++;
-			
-					jdate = (Integer.parseInt(welldata[row][0]))/2;
-					depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
-					flag = (Integer.parseInt(welldata[row][col]));
-
-				}
-			}
-		
-
-			while((flag == -9999)&& (row < maxrow)){ // and test for row < maxrow
-
-				flag = (Integer.parseInt(welldata[row][col]));	
-				row++;
-				
-			}
-		
-		}
-
-	
-		
-		
+		System.out.println("Invoking WellPlot constructor");
+		WellPlot wellplot = new WellPlot(col, maxrow, maxcol, welldata);
+		System.out.println("Invoking WellPlot addPaths method");		
+		wellplot.addPaths(group, offsetX, offsetY);
+		System.out.println("Continueing in AllWellsPaths");	
 		
 
 		Text text = new Text();
@@ -155,9 +92,6 @@ public class AllWellsPaths extends Application {
 		avetext.setFont(Font.font("helvetica", 30));
 		avetext.setFill(Color.BLUE);
 		group.getChildren().add(avetext);
-		
-		group.getChildren().add(path);
-		//group.getChildren().add(avepath);
 		
 		Scene scene = new Scene(group, 1850 + offsetX, 600, Color.BLACK);  
       
