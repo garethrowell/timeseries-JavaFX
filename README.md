@@ -1,5 +1,8 @@
 # timeseries_visualization
 ---------------------------------------
+Developed by Gareth Rowell
+Last modification date: mm/dd/yyyy
+
 # Location
 Cuyahoga Valley National Park
 https://www.nps.gov/im/htln/parks.htm
@@ -19,29 +22,27 @@ https://www.nps.gov/cuva/learn/nature/wetlands.htm
   Combine all eight wells into one table: 2010 - 2018;
   Use Julian dates where 1/1/2010 is day 1;
 
-# Working examples:
+# Project Features
+  DataScanner
+  XYAxes
+  WellPlot
+  
+  
 
-# DataScanner.java 
-  Data Scanner is a wrapper for java.util.Scanner. It takes a file name as an argument 
-  and loads its contents into a 2 dimensional array.
-  
-# ScannerTest.java
-  ScannerTest shows how to use the Data Scanner
-  
-# SimpleLineGroup.java 
-  This was my first attempt to load data and display it on an XY plot. Data were managed as individual lines
-  and loaded into a single Group object.
-  
-# SingleWellPaths.java
-  This was my second attempt to display data. The Path object was used to manage uninterrupted 
-  sets of logger data. Four paths from one well are hard-coded into the program.
-  
-  
-  
+# Represent as a time series with moving average
+
+
+
 ---------------------------------------
 Notes
 ---------------------------------------
 
+
+Create reusable classes for loading data, X and Y axes, and plotting well
+Intermediate projects include:
+Create an object that loads data
+Creating a flexible coordinate system display
+Plotting time series for a single well site;
 Plotting time series for multiple well site data;
 Plotting mean depth as well as plots for individual wells;
 
