@@ -2,7 +2,7 @@
 ---------------------------------------
 Developed by Gareth Rowell;
 Last modification date: mm/dd/yyyy;
-YoQuiroSemicolons;-)
+
 
 # Location
 Cuyahoga Valley National Park;
