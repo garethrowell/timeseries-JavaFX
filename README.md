@@ -44,6 +44,6 @@ Create an object that loads data
 Creating a flexible coordinate system display
 Plotting time series for a single well site;
 Plotting time series for multiple well site data;
-Plotting mean depth as well as plots for individual wells;
+Plot running average as well as depth values for individual wells;
 
 
