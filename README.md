@@ -2,6 +2,7 @@
 ---------------------------------------
 Developed by Gareth Rowell;
 Last modification date: mm/dd/yyyy;
+YoQuiroSemicolons;-)
 
 # Location
 Cuyahoga Valley National Park;
@@ -28,10 +29,6 @@ https://www.nps.gov/cuva/learn/nature/wetlands.htm;
   WellPlot;
   
   
-
-# Represent as a time series with moving average
-
-
 
 ---------------------------------------
 Notes
