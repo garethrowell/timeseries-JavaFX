@@ -35,10 +35,10 @@ Notes
 ---------------------------------------
 
 
-Create reusable classes for loading data, X and Y axes, and plotting well
+Create reusable classes for loading data, X and Y axes, and plotting all the data from one well;
 Intermediate projects include:
-Create an object that loads data
-Creating a flexible coordinate system display
+Create an object that loads data;
+Creating a flexible coordinate system display;
 Plotting time series for a single well site;
 Plotting time series for multiple well site data;
 Plot running average as well as depth values for individual wells;
