@@ -21,7 +21,7 @@ import javafx.scene.shape.Path;
 public class WellPlot{
 	
 
-	int col, offsetX, offsetY, maxrow, maxcol;
+	int row, col, offsetX, offsetY, maxrow, maxcol;
 	String[][] welldata = null;
 
 	 
@@ -31,6 +31,13 @@ public class WellPlot{
 		maxcol = wellmaxcol;
 		welldata =  new String[maxrow][maxcol];
 		welldata = inputdata;
+		for(row = 0; row < 26; row++){
+			System.out.println(row + " " + welldata[row][0] + " " + welldata[row][1] +
+				" " +  welldata[row][2] + " " +  welldata[row][3] + 	
+				" " +  welldata[row][4] + " " +  welldata[row][5] + 
+				" " +  welldata[row][6] + " " +  welldata[row][7] +
+				" " +  welldata[row][8] + " " +  welldata[row][9]);
+			}
 		maxrow = maxrow - 1;
 		//System.out.println("Inside WellPlot contructor");		
     }	
@@ -48,25 +55,25 @@ public class WellPlot{
 			
 		
 		 // start new path
-		//System.out.println("Start new path");
-		//System.out.println("welldata[row][0] is " + welldata[row][0]);
+		System.out.println("Start new path");
+		System.out.println("welldata[row][0] is " + welldata[row][0]);
 		
 		jdate = (Integer.parseInt(welldata[row][0] + offsetX))/2;
-		//System.out.println("jdate: " + jdate );
+		System.out.println("jdate: " + jdate );
 		
 		depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
 		flag = (Integer.parseInt(welldata[row][col]));	
 		
-		//System.out.println("jdate, depth, flag: " + jdate + depth + flag);
+		System.out.println("jdate, depth, flag: " + jdate + " " + depth + " " + flag);
 		
 		
-		//System.out.println("Before row while of addPaths method");
+		System.out.println("Before row while of addPaths method");
 		
 		while( row < maxrow ){
 
 			if(flag != -9999){
 				
-				//System.out.println("Inside if flag of addPaths method");
+				System.out.println("Inside if flag of addPaths method");
 				jdate = (Integer.parseInt(welldata[row][0] + offsetX))/2;
 				depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
 				flag = (Integer.parseInt(welldata[row][col]));
@@ -79,8 +86,8 @@ public class WellPlot{
 				depth = -1*(Integer.parseInt(welldata[row][col]))+(offsetY + 250);
 				flag = (Integer.parseInt(welldata[row][col]));		
 				while((flag != -9999) && (row < maxrow)){
-			        //System.out.println("Inside path while... row, jdate, depth: " + row + " " + 
-						//jdate + " " + depth);
+			        System.out.println("Inside path while... row, jdate, depth: " + row + " " + 
+						jdate + " " + depth);
 					lineTo = new LineTo(jdate, depth);				
 					path.getElements().add(lineTo); 
 					group.getChildren().add(path);
@@ -101,10 +108,10 @@ public class WellPlot{
 		
 
 			while((flag == -9999)&& (row < maxrow)){ // and test for row < maxrow
-
-				flag = (Integer.parseInt(welldata[row][col]));	
 				row++;
-				System.out.println("Bottom of flag while");
+				flag = (Integer.parseInt(welldata[row][col]));	
+				System.out.println("Bottom of flag while, welldata[row][col]: " + welldata[row][col]);
+				System.out.println("Bottom of flag while, flag, row:" + flag + " " + row);
 				
 			}
 			
