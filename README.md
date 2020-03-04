@@ -1,7 +1,6 @@
 # timeseries_visualization
 ---------------------------------------
-Developed by Gareth Rowell
-Last modification date: mm/dd/yyyy
+Timeseries data visualization using JavaFX
 
 # Location
 Cuyahoga Valley National Park
@@ -9,8 +8,7 @@ https://www.nps.gov/im/htln/parks.htm
 https://www.nps.gov/cuva/learn/nature/wetlands.htm
 
 # Data source
-  Sonia Bingham, Wetlands Biologist, 
-  Heartland I&M Network, Cuyahoga Valley National Park, Ohio; 
+  Cuyahoga Valley National Park, Ohio; 
   Water level depth using Ecotone Water Level Data Logger;
   Eight well sites from November 2010 to June 2018;
   
