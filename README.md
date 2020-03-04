@@ -1,16 +1,15 @@
 # timeseries_visualization
 ---------------------------------------
-Developed by Gareth Rowell;
-Last modification date: mm/dd/yyyy;
-
+Developed by Gareth Rowell
+Last modification date: mm/dd/yyyy
 
 # Location
-Cuyahoga Valley National Park;
-https://www.nps.gov/im/htln/parks.htm;
-https://www.nps.gov/cuva/learn/nature/wetlands.htm;
+Cuyahoga Valley National Park
+https://www.nps.gov/im/htln/parks.htm
+https://www.nps.gov/cuva/learn/nature/wetlands.htm
 
 # Data source
-  Sonia Bingham, Wetlands Biologist; 
+  Sonia Bingham, Wetlands Biologist, 
   Heartland I&M Network, Cuyahoga Valley National Park, Ohio; 
   Water level depth using Ecotone Water Level Data Logger;
   Eight well sites from November 2010 to June 2018;
@@ -24,23 +23,27 @@ https://www.nps.gov/cuva/learn/nature/wetlands.htm;
   Use Julian dates where 1/1/2010 is day 1;
 
 # Project Features
-  DataScanner;
-  XYAxes;
-  WellPlot;
+  DataScanner
+  XYAxes
+  WellPlot
   
   
+
+# Represent as a time series with moving average
+
+
 
 ---------------------------------------
 Notes
 ---------------------------------------
 
 
-Create reusable classes for loading data, X and Y axes, and plotting all the data from one well;
+Create reusable classes for loading data, X and Y axes, and plotting well
 Intermediate projects include:
-Create an object that loads data;
-Creating a flexible coordinate system display;
+Create an object that loads data
+Creating a flexible coordinate system display
 Plotting time series for a single well site;
 Plotting time series for multiple well site data;
-Plot running average as well as depth values for individual wells;
+Plotting mean depth as well as plots for individual wells;
 
 
